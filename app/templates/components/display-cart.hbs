@@ -1,3 +1,12 @@
+<hr>
 {{#each shoppingCart.items as |item|}}
-  {{item.title}} -- {{item.cost}}
+  <h1>{{item.title}} -- {{item.cost}}</h1>
 {{/each}}
+<h1>Fill Form to save cart</h1>
+<form class="" action="index.html" method="post">
+
+  {{input value=username placeholder="username"}}
+  {{input value=email placeholder="email"}}
+<button {{action 'saveToCart' shoppingCart.items}}>Add My Cart</button>
+</form>
+<h1>total {{shoppingCart.totalPrice}}</h1>
