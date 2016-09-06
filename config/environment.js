@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase:{
+      apiKey: "AIzaSyCXBxspQRdyKfcidhk4qiWRpSu5ogVfG0Y",
+      authDomain: "shoping-cart-51003.firebaseapp.com",
+      databaseURL: "https://shoping-cart-51003.firebaseio.com",
+      storageBucket: ""
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

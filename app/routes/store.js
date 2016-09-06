@@ -1,50 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model:function(){
-    return [
-  {
-    "cost": 67.28,
-    "picture": "http://placehold.it/32x32",
-    "title": "title3",
-    "description": "description1"
-  },
-  {
-    "cost": 71.54,
-    "picture": "http://placehold.it/32x32",
-    "title": "title2",
-    "description": "description23213"
-  },
-  {
-    "cost": 77.74,
-    "picture": "http://placehold.it/32x32",
-    "title": "title1",
-    "description": "description2"
-  },
-  {
-    "cost": 56.62,
-    "picture": "http://placehold.it/32x32",
-    "title": "title2",
-    "description": "description2"
-  },
-  {
-    "cost": 58.97,
-    "picture": "http://placehold.it/32x32",
-    "title": "title1",
-    "description": "description23213"
-  },
-  {
-    "cost": 85.21,
-    "picture": "http://placehold.it/32x32",
-    "title": "title2",
-    "description": "description23213"
-  },
-  {
-    "cost": 89.35,
-    "picture": "http://placehold.it/32x32",
-    "title": "title1",
-    "description": "description23213"
-  }
-];
+  model(){
+    return this.store.findAll('product');
   }
 });
