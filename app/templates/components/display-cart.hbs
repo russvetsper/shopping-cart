@@ -1,12 +1,13 @@
 <hr>
-{{#each shoppingCart.items as |item|}}
-  <h1>{{item.title}} -- {{item.cost}}</h1>
+{{#each shoppingCart.itemsAndQty as |item|}}
+  <h1>{{item.itemProduct.title}} -- {{item.itemProduct.cost}} --qty:{{item.qty}}  <span class="glyphicon glyphicon-remove" aria-hidden="true" {{action 'removeToCart' item}}></span>
+</h1>
 {{/each}}
 <h1>Fill Form to save cart</h1>
 <form class="" action="index.html" method="post">
 
   {{input value=username placeholder="username"}}
   {{input value=email placeholder="email"}}
-<button {{action 'saveToCart' shoppingCart.items}}>Add My Cart</button>
+<button {{action 'saveToCart' shoppingCart.items}} class="btn">Add My Cart</button>
 </form>
 <h1>total {{shoppingCart.totalPrice}}</h1>
